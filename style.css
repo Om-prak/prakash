@@ -15,60 +15,28 @@ body{
 	align-items: center;
 }
 
+#check{
+	display: none;
+}
+
+label{
+	display: none;
+}
+
 header{
 	background: #0F24F2;
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
 	width: 100%;
+	height: 75px;
 	position: fixed;
 	top: 0;
 	right: 0;
 
 }
 
-@media only screen and (max-width: 800px) {
-  header {
-    flex-wrap: wrap;
-  }
 
-  .logo{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	/* border: 1px solid red; */
-	}
-
-	#navbar{
-	/* border: 1px solid red; */
-	width: 100%;
-	display: flex;
-	/* flex-direction: row-reverse; */
-	align-items: center;
-	justify-content: center;
-
-	}
-
-	#home{
-		width: 100vw;
-		display: flex;
-		flex-wrap: wrap-reverse;
-		align-items: center;
-		justify-content: center;
-		padding-top: 100px;
-	}
-
-	h1,p{
-		text-align: center;
-	}
-
-	img{
-		padding: 30px;
-	}
-
-
-}
 
 .logo{
 	display: flex;
@@ -86,21 +54,19 @@ nav{
 	padding: 0 30px;
 }
 
-nav ul{
-	display: flex;
+/* nav ul{
+	display: in;
 	align-items: center;
 	height: 100%;
-	/* background: red; */
-	/* border: 1px solid red; */
-}
+	
+} */
 
 .opt{
 
 	/* background: blue; */
 	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: inline-block;
+	line-height: 50px;
 	padding: 0 20px;
 }
 
@@ -184,4 +150,82 @@ nav ul{
 	position: fixed;
 	bottom: 50px;
 	right: 10px;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  header {
+/*     flex-wrap: wrap; */
+  	}
+
+  	label{
+	display: inline-block;
+	font-size: 30px;
+    }
+
+    #check:checked ~ ul {
+    	left: 0;
+    }
+
+    ul{
+    	
+    	position: fixed;
+    	top: 75px;
+    	left: -100%;
+    	width: 100%;
+    	height: 50vh;
+    	padding: 30px;
+    	transition: .5s;
+    	background: darkblue;
+
+    }
+
+    ul a li{
+    	width: 100%;
+    }
+
+    a{
+    	display: block;
+    	text-align: center;
+    }
+
+  .logo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/* 	width: 100%; */
+	/* border: 1px solid red; */
+	}
+
+	#navbar{
+	/* border: 1px solid red; */
+	width: 100%;
+	display: flex;
+	/* flex-direction: row-reverse; */
+	align-items: center;
+	justify-content: flex-start;
+
+	}
+
+	#home{
+		width: 100vw;
+		display: flex;
+		flex-wrap: wrap-reverse;
+		align-items: center;
+		justify-content: center;
+		padding-top: 100px;
+	}
+
+	h1,p{
+		text-align: center;
+	}
+
+	img{
+		padding: 30px;
+	}
+
+
 }
